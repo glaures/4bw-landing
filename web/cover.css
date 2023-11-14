@@ -1,77 +1,14 @@
-/*
- * Globals
- */
-
-@font-face {
-  font-family: 'Orson';
-  src:  url('fonts/SF-Orson-Casual-Heavy.woff') format('woff');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Orson';
-  src:  url('fonts/SF-Orson-Casual-Medium.woff') format('woff');
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #697550;
-  text-shadow: none; /* Prevent inheritance from `body` */
-}
-
-.bg-primary {
-  background-color: #6D4F3E;
-}
-
-/*
- * Base structure
- */
-
 body {
-  text-shadow: 0 .05rem .1rem #323F36;
-  box-shadow: inset 0 0 5rem #323F36;
+  background-color: #123E49;
+  text-shadow: 0 .05rem .1rem black;
+  font-family: Helvetica,Arial,sans-serif;
 }
 
-.cover-container {
-  color: #D0933F;
-  max-width: 42em;
-  background-color: #323F36;
-}
-
-
-/*
- * Header
- */
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: #697550;
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: #323F36;
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #697550;
-  border-bottom-color: #323F36;
+.bg-dark {
+  background-color: #123E49!important;
 }
 
 .h1, .h2, .h3, .h3, .h4, .h4 {
-  font-family: Orson, sans-serif;
   font-size: 3rem;
 }
 
-footer {
-  color: #F0E3D0AA;
-}
