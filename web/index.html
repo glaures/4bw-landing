@@ -75,12 +75,8 @@
                         type: 'launch_updates'
                     }),
                     contentType: 'application/json',
-                    dataType: 'json',
-                    crossDomain: true,
-                    headers: {
-                        accept: "application/json",
-                        "Access-Control-Allow-Origin":"*"
-                    }
+                    dataType: 'jsonp',
+                    crossDomain: true
                 }).done(() => {
                     alert('Schau in Dein Email-Postfach, um Deine Email-Adresse zu bestätigen!')
                 })
