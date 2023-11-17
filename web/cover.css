@@ -12,3 +12,14 @@ body {
   font-size: 3rem;
 }
 
+a {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: white;
+}
