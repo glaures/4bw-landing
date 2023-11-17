@@ -74,7 +74,12 @@
             $.ajax({
                 url: `${apiBaseUrl}/subscriptions/${id}`,
                 method: 'PUT',
-                async: false
+                async: false,
+                crossDomain: true,
+                headers: {
+                    accept: "application/json",
+                    "Access-Control-Allow-Origin":"*"
+                }
             }).done(() => {
                 $("#message").text('Danke. Dur wirst jetzt zurück zur Hauptseite geleitet...')
                 alert('redirect')
