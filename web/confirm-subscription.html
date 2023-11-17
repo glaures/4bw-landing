@@ -61,24 +61,23 @@
     </script>
 
     <script>
+        $.urlParam = function (name) {
+            var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+            if (results == null) {
+                return null;
+            }
+            return decodeURI(results[1]) || 0;
+        }
         $(document).ready(function () {
-            $("#submit").click((event) => {
-                event.preventDefault()
-                const apiBaseUrl = $(location).attr('hostname').includes('localhost') ? 'http://localhost:8080' : 'https://4betterwork.com'
-                const email = $("#emailInput").val()
-                $.ajax({
-                    url: `${apiBaseUrl}/subscriptions`,
-                    method: 'POST',
-                    async: false,
-                    data: JSON.stringify({
-                        email: email,
-                        type: 'launch_updates'
-                    }),
-                    contentType: 'application/json',
-                    dataType: 'json'
-                }).done(() => {
-                    alert('Schau in Dein Email-Postfach, um Deine Email-Adresse zu bestätigen!')
-                })
+            const id = $.urlParam('id')
+            const apiBaseUrl = $(location).attr('hostname').includes('localhost') ? 'http://localhost:8080' : 'https://4betterwork.com'
+            $.ajax({
+                url: `${apiBaseUrl}/subscriptions/${id}`,
+                method: 'PUT',
+                async: false
+            }).done(() => {
+                $("#message").text('Danke. Dur wirst jetzt zurück zur Hauptseite geleitet...')
+                alert('redirect')
             })
         });
     </script>
@@ -91,16 +90,9 @@
     </header>
 
     <main class="px-3">
-        <img src="img/4bw-logo.svg" alt="logo" style="max-width: 80%;" width="330"/>
-        <p class="lead">Coming soon.</p>
         <div class="box-wrapper">
             <div class="box">
-                <p>Ich möchte über Neuigkeiten zu 4BetterWork informiert werden und stimme den <a
-                        href="data-privacy.html">Datenschutzbestimmungen</a> zu.</p>
-                <p>
-                    <input id="emailInput" type="email" placeholder="Email Adresse"/>
-                    <button id="submit" class="btn btn-secondary">Anmelden</button>
-                </p>
+                <p id="message">Deine Adresse wird bestätigt ...</p>
             </div>
         </div>
     </main>
