@@ -64,7 +64,7 @@
         $(document).ready(function () {
             $("#submit").click((event) => {
                 event.preventDefault()
-                const apiBaseUrl = $(location).attr('hostname').includes('localhost') ? 'http://localhost:8080' : 'https://4betterwork.com'
+                const apiBaseUrl = $(location).attr('hostname').includes('localhost') ? 'http://localhost:8080' : 'https://api.4betterwork.com'
                 const email = $("#emailInput").val()
                 $.ajax({
                     url: `${apiBaseUrl}/subscriptions`,
