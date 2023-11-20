@@ -75,15 +75,12 @@
                 url: `${apiBaseUrl}/subscriptions/${id}`,
                 method: 'PUT',
                 async: false,
-                contentType: 'application/json',
-                dataType: 'json',
                 crossDomain: true
             }).done(() => {
                 $("#message").text('Danke. Dur wirst jetzt zurück zur Hauptseite geleitet...')
                 const href = $(location).attr('href')
                 const url = href.slice(0, href.indexOf('confirm')) + 'index.html'
-                console.log(url)
-                setTimeout(() => window.location.href = url, 0)
+                setTimeout(() => window.location.href = url, 3000)
             })
         });
     </script>
