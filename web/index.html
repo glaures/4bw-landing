@@ -48,6 +48,10 @@
             justify-content: center;
             margin-top: 12px;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 
 
@@ -77,8 +81,8 @@
                     contentType: 'application/json',
                     dataType: 'json',
                     crossDomain: true
-                }).done(() => {
-                    alert('Schau in Dein Email-Postfach, um Deine Email-Adresse zu bestätigen!')
+                }).always(() => {
+                    $('#message').removeClass('hidden')
                 })
             })
         });
@@ -102,6 +106,7 @@
                     <input id="emailInput" type="email" placeholder="Email Adresse"/>
                     <button id="submit" class="btn btn-secondary">Anmelden</button>
                 </p>
+                <p id="message" class="hidden">Bitte schau in Deine Inbox, um Deine Email-Adresse zu bestätigen!</p>
             </div>
         </div>
     </main>
