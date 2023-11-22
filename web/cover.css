@@ -1,7 +1,12 @@
 body {
   background-color: #123E49;
   text-shadow: 0 .05rem .1rem black;
+  color: #faf3dd;
   font-family: Helvetica,Arial,sans-serif;
+}
+
+.bg-light {
+  color: #faf3dd;
 }
 
 .bg-dark {
@@ -15,11 +20,12 @@ body {
 a {
   text-decoration: underline;
   text-decoration-style: dotted;
-  color: white;
+  color: #faf3dd;
 }
 
 a:hover {
   text-decoration: underline;
   text-decoration-style: solid;
-  color: white;
+  color: #faf3dd;
 }
+

@@ -38,7 +38,7 @@
         }
 
         .box {
-            border: 1px dashed white;
+            border: 1px dashed #faf3dd;
             background-color: #FFFFFF22;
             padding: 12px;
         }
@@ -51,6 +51,14 @@
 
         .hidden {
             display: none;
+        }
+
+        .form-control {
+            background-color: #faf3dd;
+        }
+
+        .btn {
+            background-color: #c2095a;
         }
     </style>
 
@@ -89,7 +97,7 @@
     </script>
 
 </head>
-<body class="d-flex h-100 text-center text-white bg-dark">
+<body class="d-flex h-100 text-center bg-dark">
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
@@ -102,9 +110,9 @@
             <div class="box">
                 <p>Ich möchte über Neuigkeiten zu 4BetterWork informiert werden und stimme den <a
                         href="data-privacy.html">Datenschutzbestimmungen</a> zu.</p>
-                <p>
-                    <input id="emailInput" type="email" placeholder="Email Adresse"/>
-                    <button id="submit" class="btn btn-secondary">Anmelden</button>
+                <p class="d-flex">
+                    <input class="form-control" id="emailInput" type="email" placeholder="Email Adresse"/>
+                    <button id="submit" class="btn btn-secondary ms-1">Anmelden</button>
                 </p>
                 <p id="message" class="hidden">Bitte schau in Deine Inbox, um Deine Email-Adresse zu bestätigen!</p>
             </div>
